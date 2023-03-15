@@ -1,4 +1,3 @@
-import React from "react";
 import "./css/login.css";
 import { loginUrl } from "./spotify";
 
