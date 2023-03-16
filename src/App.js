@@ -7,10 +7,8 @@ import { DataLayerContext } from "./DataLayer";
 // import { useDataLayerValue } from "./DataLayer";
 
 const spotify = new SpotifyWebApi();
-console.log(spotify);
 
 const App = () => {
-  // const [token, setToken] = useState(null);
   const useDataLayerValue = useContext(DataLayerContext);
 
   const [{ user, token }, dispatch] = useDataLayerValue;
@@ -29,12 +27,7 @@ const App = () => {
         token: _token,
       });
 
-      // setToken(_token);
-      console.log(_token);
-
       spotify.getMe().then((user) => {
-        console.log(user);
-
         dispatch({
           type: "SET_USER",
           user: user,
@@ -43,9 +36,11 @@ const App = () => {
     }
   }, []);
 
-  console.log(token);
-
-  return <div className="app">{token ? <Player /> : <Login />}</div>;
+  return (
+    <div className="app">
+      {token ? <Player spotify={spotify} /> : <Login />}
+    </div>
+  );
 };
 
 export default App;
