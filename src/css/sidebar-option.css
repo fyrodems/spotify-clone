@@ -1,3 +1,10 @@
 .sidebar-option {
     color: grey;
+    height: 40px;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.sidebar-option:hover {
+    color: #fff;
 }
