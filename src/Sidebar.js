@@ -3,8 +3,13 @@ import SidebarOption from "./SidebarOption";
 import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
 import LibraryIcon from "@material-ui/icons/LibraryMusic";
+import { DataLayerContext } from "./DataLayer";
+import { useContext } from "react";
 
 const Sidebar = () => {
+  const useDataLayerValue = useContext(DataLayerContext);
+  const [{ playlists }, dispatch] = useDataLayerValue;
+
   return (
     <div className="sidebar">
       <img
@@ -16,11 +21,13 @@ const Sidebar = () => {
       <SidebarOption Icon={SearchIcon} title="Search" />
       <SidebarOption Icon={LibraryIcon} title="Your Library" />
 
-      <stron className="sidebar__title">playlists</stron>
+      <strong className="sidebar__title">playlists</strong>
       <hr />
 
-      <SidebarOption title="rap" />
-      <SidebarOption title="rock" />
+      {playlists?.items?.map((playlist) => {
+        console.log(playlist);
+        return <SidebarOption title={playlist.name} />;
+      })}
     </div>
   );
 };
