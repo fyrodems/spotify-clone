@@ -4,14 +4,34 @@
     background-color: #040404;
     color: white;
     min-width: 230px;
-    padding: 0 10px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
 
 }
 
+.sidebar hr {
+    border: 1px solid #282828;
+    width: 98%;
+    margin: 10px auto;
+}
+
+
 .sidebar__logo {
     height: 70px;
     padding: 10px;
     margin: 0 auto;
+}
+
+.sidebar__title {
+    /* margin-left: 10px; */
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.sidebar-option p {
+    margin: 0 10px;
+    font-size: 14px;
 }

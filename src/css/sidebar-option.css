@@ -1,4 +1,7 @@
 .sidebar-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: grey;
     height: 40px;
     cursor: pointer;
@@ -7,4 +10,8 @@
 
 .sidebar-option:hover {
     color: #fff;
+}
+
+.sidebar-option p {
+
 }
