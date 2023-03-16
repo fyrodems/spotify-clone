@@ -1,0 +1,7 @@
+.body {
+    flex: 0.8;
+    background: linear-gradient(rgb(91, 87, 115), #000);
+    height: 100vh;
+    color: #fff;
+    padding: 30px;
+}
