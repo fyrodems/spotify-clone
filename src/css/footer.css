@@ -10,22 +10,57 @@
     padding: 20px;
 }
 
-
-
-.footer__left {
+.footer__details {
     flex: 0.3;
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+
+.details__song-info {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.details__song-info h4 {
+    margin-bottom: 5px;
+}
+
+.details__song-info p {
+    font-size: 12px;
 }
 
 .footer__controls {
     flex: 0.4;
     padding: 0 100px;
-    color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 500px;
 }
 
-.footer__right {
+.footer__volume {
     flex: 0.3;
+    display: flex;
+    align-items: center;
+} 
+
+.footer__volume div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__volume .MuiSlider-root {
+    color: #1ed15e;
+}
+
+.controls__icon.controls__green {
+    color: #1ed15e;
+}
+
+.controls__icon:hover {
+    transition: transform 250ms ease-in-out;
+    transform: scale(1.25);
 }
