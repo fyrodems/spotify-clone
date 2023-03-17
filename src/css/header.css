@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.header__controls {
+    flex: 0.5;
+    min-width: 70px;
+    background-color: #fff;
+    color: gray;
+    padding: 10px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.header__controls input {
+    border: none;
+    width: 100%;
+}
+
+.header__user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
