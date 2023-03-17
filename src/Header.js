@@ -1,8 +1,13 @@
+import { useContext } from "react";
 import "./css/header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import { Avatar } from "@material-ui/core";
+import { DataLayerContext } from "./DataLayer";
 
 const Header = () => {
+  const useDataLayerValue = useContext(DataLayerContext);
+  const [{ user }, dispatch] = useDataLayerValue;
+
   return (
     <div className="header">
       <div className="header__search">
@@ -13,8 +18,8 @@ const Header = () => {
         />
       </div>
       <div className="header__user">
-        <Avatar src="" alt="avatar" />
-        <h4>Imie i coś tam</h4>
+        <Avatar src={user?.images[0]?.url} alt={user?.display_name} />
+        <h4>{user?.display_name}</h4>
       </div>
     </div>
   );
