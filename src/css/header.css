@@ -4,7 +4,7 @@
     margin-bottom: 30px;
 }
 
-.header__controls {
+.header__search {
     flex: 0.5;
     min-width: 70px;
     background-color: #fff;
@@ -13,9 +13,10 @@
     border-radius: 30px;
     display: flex;
     align-items: center;
+    gap: 5px;
 }
 
-.header__controls input {
+.header__search input {
     border: none;
     width: 100%;
 }
