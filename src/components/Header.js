@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
-import "./css/header.css";
+import "../css/header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import { Avatar } from "@material-ui/core";
-import { DataLayerContext } from "./DataLayer";
+import { DataLayerContext } from "../utils/DataLayer";
 // import spotify from "./App";
 
 const Header = ({ spotify }) => {

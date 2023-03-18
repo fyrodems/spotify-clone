@@ -1,4 +1,4 @@
-import "./css/song.css";
+import "../css/song.css";
 
 const Song = ({ track }) => {
   return (

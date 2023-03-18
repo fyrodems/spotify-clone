@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import "./css/body.css";
-import { DataLayerContext } from "./DataLayer";
+import "../css/body.css";
+import { DataLayerContext } from "../utils/DataLayer";
 import Header from "./Header";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import FavoriteIcon from "@material-ui/icons/Favorite";

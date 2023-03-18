@@ -1,9 +1,9 @@
-import "./css/sidebar.css";
+import "../css/sidebar.css";
 import SidebarOption from "./SidebarOption";
 import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
 import LibraryIcon from "@material-ui/icons/LibraryMusic";
-import { DataLayerContext } from "./DataLayer";
+import { DataLayerContext } from "../utils/DataLayer";
 import { useContext } from "react";
 
 const Sidebar = () => {

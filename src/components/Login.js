@@ -1,5 +1,5 @@
-import "./css/login.css";
-import { loginUrl } from "./spotify";
+import "../css/login.css";
+import { loginUrl } from "../utils/spotify";
 
 const Login = () => {
   return (

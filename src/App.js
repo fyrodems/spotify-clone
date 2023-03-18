@@ -1,10 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import Login from "./Login";
-import { getTokenFromResponseUrl } from "./spotify";
+import Login from "./components/Login";
+import { getTokenFromResponseUrl } from "./utils/spotify";
 import SpotifyWebApi from "spotify-web-api-js";
-import Player from "./Player";
-import { DataLayerContext } from "./DataLayer";
-// import { useDataLayerValue } from "./DataLayer";
+import Player from "./components/Player";
+import { DataLayerContext } from "./utils/DataLayer";
 
 const spotify = new SpotifyWebApi();
 
@@ -41,7 +40,7 @@ const App = () => {
         });
       });
 
-      // 37i9dQZEVXcVqP01wLCHPU
+      // 37i9dQZEVXcVqP01wLCHPU !!! playlist.id (console.log(discover__weekly) in Body.js)
       spotify
         .getPlaylist("37i9dQZEVXcVqP01wLCHPU")
         .then((res) =>

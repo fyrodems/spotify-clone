@@ -1,4 +1,4 @@
-import "./css/sidebar-option.css";
+import "../css/sidebar-option.css";
 
 const SidebarOption = ({ title, Icon }) => {
   return (

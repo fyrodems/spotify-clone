@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
-import { DataLayerContext } from "./DataLayer";
-import "./css/footer.css";
+import { DataLayerContext } from "../utils/DataLayer";
+import "../css/footer.css";
 import { Grid, Slider } from "@material-ui/core";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 import PauseCircleOutlineIcon from "@material-ui/icons/PauseCircleOutline";

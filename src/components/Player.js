@@ -1,4 +1,4 @@
-import "./css/player.css";
+import "../css/player.css";
 import Body from "./Body";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
