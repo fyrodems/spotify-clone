@@ -11,8 +11,7 @@ const Song = ({ track }) => {
       <div className="song__info">
         <h3>{track?.name}</h3>
         <p>
-          {track?.artists.map((artist) => artist.name)}
-          {/* {track?.album.name} */}
+          {track?.artists.map((artist) => artist.name)} - {track?.album.name}
         </p>
       </div>
     </div>

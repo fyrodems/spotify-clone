@@ -12,10 +12,7 @@ const Header = () => {
     <div className="header">
       <div className="header__search">
         <SearchIcon />
-        <input
-          type="text"
-          placeholder="Search for artists, songs or something"
-        />
+        <input type="text" placeholder="Search for something" />
       </div>
       <div className="header__user">
         <Avatar src={user?.images[0]?.url} alt={user?.display_name} />

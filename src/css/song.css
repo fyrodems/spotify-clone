@@ -1,5 +1,5 @@
 .song{
-    margin-left: 20px;
+    /* margin: 0 20px; */
     padding: 20px;
     display: flex;
     align-items: center;
@@ -34,4 +34,3 @@
     height: 45px;
     width: 45px;
 }
-

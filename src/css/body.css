@@ -4,6 +4,11 @@
     height: 100vh;
     color: #fff;
     padding: 30px;
+    overflow-y: scroll;
+}
+
+.body::-webkit-scrollbar{
+    display: none;
 }
 
 .body__banner {
@@ -47,11 +52,16 @@
 }
 
 .controls__play {
-    font-size: 80px;
+    font-size: 50px !important;
     margin: 20px 0 20px 50px;
-    transition: 150ms ease-in-out;
+    transition: 150ms ease-in-out !important;
 }
 
 .controls__play:hover {
     transform: scale(1.1);
+}
+
+.songs__container {
+    padding: 0 20px;
+    margin-bottom: 60px;
 }

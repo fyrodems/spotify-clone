@@ -29,9 +29,11 @@ const Body = ({ spotify }) => {
           <MoreHorizIcon />
         </div>
 
-        {discover_weekly?.tracks.items.map((item) => (
-          <Song track={item.track} />
-        ))}
+        <div className="songs__container">
+          {discover_weekly?.tracks.items.map((item) => (
+            <Song track={item.track} />
+          ))}
+        </div>
       </div>
     </div>
   );
