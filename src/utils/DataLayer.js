@@ -1,7 +1,7 @@
 /**
  * context api
  */
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useReducer } from "react";
 
 const DataLayerContext = createContext();
 

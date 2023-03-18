@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import "../css/header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import { Avatar } from "@material-ui/core";
@@ -7,7 +7,7 @@ import { DataLayerContext } from "../utils/DataLayer";
 
 const Header = ({ spotify }) => {
   const useDataLayerValue = useContext(DataLayerContext);
-  const [{ user }, dispatch] = useDataLayerValue;
+  const [{ user }] = useDataLayerValue;
 
   console.log(spotify);
 

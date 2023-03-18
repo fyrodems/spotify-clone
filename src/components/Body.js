@@ -8,7 +8,7 @@ import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import Song from "./Song";
 
 const Body = ({ spotify }) => {
-  const [{ discover_weekly }, dispatch] = useContext(DataLayerContext);
+  const [{ discover_weekly }] = useContext(DataLayerContext);
   return (
     <div className="body">
       <Header spotify={spotify} />

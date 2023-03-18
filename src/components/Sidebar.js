@@ -8,7 +8,7 @@ import { useContext } from "react";
 
 const Sidebar = () => {
   const useDataLayerValue = useContext(DataLayerContext);
-  const [{ playlists }, dispatch] = useDataLayerValue;
+  const [{ playlists }] = useDataLayerValue;
 
   return (
     <div className="sidebar">

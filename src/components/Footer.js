@@ -15,8 +15,6 @@ const Footer = ({ spotify }) => {
   const [{ token, item, playing }, dispatch] = useContext(DataLayerContext);
 
   useEffect(() => {
-    // console.log("blebleblebleble", spotify);
-
     spotify.getMyCurrentPlaybackState().then((r) => {
       console.log(r);
 
@@ -30,6 +28,7 @@ const Footer = ({ spotify }) => {
         item: r.item,
       });
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token]);
 
   const handlePlayPause = () => {
@@ -96,11 +95,8 @@ const Footer = ({ spotify }) => {
       </div>
 
       <div className="footer__controls">
-        <ShuffleIcon
-          onClick={skipNext}
-          className="controls__icon controls__green"
-        />
-        <SkipPreviousIcon className="controls__icon" />
+        <ShuffleIcon className="controls__icon controls__green" />
+        <SkipPreviousIcon onClick={skipPrevious} className="controls__icon" />
         {playing ? (
           <PauseCircleOutlineIcon
             onClick={handlePlayPause}
@@ -114,7 +110,7 @@ const Footer = ({ spotify }) => {
             className="controls__icon"
           />
         )}
-        <SkipNextIcon className="controls__icon" />
+        <SkipNextIcon onClick={skipNext} className="controls__icon" />
         <RepeatIcon className="controls__icon controls__green" />
       </div>
 
