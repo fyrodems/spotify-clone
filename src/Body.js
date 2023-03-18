@@ -5,6 +5,7 @@ import Header from "./Header";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import Song from "./Song";
 
 const Body = ({ spotify }) => {
   const [{ discover_weekly }, dispatch] = useContext(DataLayerContext);
@@ -23,10 +24,14 @@ const Body = ({ spotify }) => {
 
       <div className="body__songs">
         <div className="songs__controls">
-          <PlayCircleFilledIcon />
-          <FavoriteIcon />
+          <PlayCircleFilledIcon className="controls__play" />
+          <FavoriteIcon fontSize="large" />
           <MoreHorizIcon />
         </div>
+
+        {discover_weekly?.tracks.items.map((item) => (
+          <Song track={item.track} />
+        ))}
       </div>
     </div>
   );

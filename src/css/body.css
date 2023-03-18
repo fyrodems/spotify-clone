@@ -34,3 +34,24 @@
 .banner__text p {
     font-size: 14px;
 }
+
+.body__songs {
+    margin: 20px -30px;
+
+}
+
+.songs__controls {
+    display: flex;
+    align-items: center;
+    gap: 20px
+}
+
+.controls__play {
+    font-size: 80px;
+    margin: 20px 0 20px 50px;
+    transition: 150ms ease-in-out;
+}
+
+.controls__play:hover {
+    transform: scale(1.1);
+}
