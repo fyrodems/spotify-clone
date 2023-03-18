@@ -6,6 +6,11 @@ const clientId = "ff57451b553242e5bc702690c27d2b4c";
 const redirectUri = "http://192.168.1.133:3000"; //biuro
 
 const scopes = [
+  "streaming",
+  "user-read-email",
+  "user-read-private",
+  "user-library-read",
+  "user-library-modify",
   "user-read-currently-playing",
   "user-read-recently-played",
   "user-read-playback-state",
