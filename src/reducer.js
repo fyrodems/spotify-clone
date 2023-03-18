@@ -4,8 +4,9 @@ const initialState = {
   playing: false,
   item: null,
   token:
-    // null,
+    //null,
     "BQDpRTHWND6Qf78bJ3KsDK6jkzeETey2dT-bwcxchS_eGt6nIx_zmqDCT2FJLTzvDDhEM2NoKVWh4uRKo7qiKznLtiLHmnyYPm5HaRcr5FRS9wVFWB3hRT-26Ey54gBDOJPAx5OUcYi98D24HnKJVtUD0gZfK6OYu-iw7ygfAtp_9xtqMGVSrTfCIwxk",
+  // discover_weekly: null,
 };
 
 const reducer = (state, action) => {
@@ -29,6 +30,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         playlists: action.playlists,
+      };
+
+    case "SET_DISCOVER_WEEKLY":
+      return {
+        ...state,
+        discover_weekly: action.discover_weekly,
       };
 
     default:

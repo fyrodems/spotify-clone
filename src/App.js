@@ -40,6 +40,13 @@ const App = () => {
           playlists: playlists,
         });
       });
+
+      // 37i9dQZEVXcVqP01wLCHPU
+      spotify
+        .getPlaylist("37i9dQZEVXcVqP01wLCHPU")
+        .then((res) =>
+          dispatch({ type: "SET_DISCOVER_WEEKLY", discover_weekly: res })
+        );
     }
   }, []);
 
