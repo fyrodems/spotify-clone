@@ -6,6 +6,7 @@
 }
 
 .login img {
+    max-width: 500px;
     width: 100%;
 }
 
@@ -16,4 +17,7 @@
     color: #fff;
     text-decoration: none;
     font-weight: 700;
+    text-transform: uppercase;
+    /* max-width: 205px;
+    width: 100%; */
 }
