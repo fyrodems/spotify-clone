@@ -16,7 +16,9 @@
     gap: 5px;
 }
 
-.header__search input {
+.header__search input, 
+.header__search input:focus-visible {
+    outline: none;
     border: none;
     width: 100%;
 }
