@@ -3,19 +3,17 @@ import "../css/header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import { Avatar } from "@material-ui/core";
 import { DataLayerContext } from "../utils/DataLayer";
-// import spotify from "./App";
+import SearchEngine from "../utils/searchEngine";
 
 const Header = ({ spotify }) => {
   const useDataLayerValue = useContext(DataLayerContext);
   const [{ user }] = useDataLayerValue;
 
-  console.log(spotify);
-
   return (
     <div className="header">
       <div className="header__search">
         <SearchIcon />
-        <input type="text" placeholder="Search for something" />
+        <SearchEngine spotify={spotify} />
       </div>
       <div className="header__user">
         <Avatar src={user?.images[0]?.url} alt={user?.display_name} />

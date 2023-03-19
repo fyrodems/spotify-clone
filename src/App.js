@@ -6,6 +6,7 @@ import Player from "./components/Player";
 import { DataLayerContext } from "./utils/DataLayer";
 
 const spotify = new SpotifyWebApi();
+console.log(spotify);
 
 const App = () => {
   const useDataLayerValue = useContext(DataLayerContext);
@@ -47,6 +48,7 @@ const App = () => {
           dispatch({ type: "SET_DISCOVER_WEEKLY", discover_weekly: res })
         );
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return <>{token ? <Player spotify={spotify} /> : <Login />}</>;

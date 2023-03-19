@@ -1,5 +1,5 @@
-import { useContext } from "react";
 import "../css/body.css";
+import { useContext } from "react";
 import { DataLayerContext } from "../utils/DataLayer";
 import Header from "./Header";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
@@ -31,7 +31,7 @@ const Body = ({ spotify }) => {
 
         <div className="songs__container">
           {discover_weekly?.tracks.items.map((item) => (
-            <Song track={item.track} />
+            <Song key={item.track.id} track={item.track} />
           ))}
         </div>
       </div>
