@@ -98,13 +98,13 @@ const Footer = ({ spotify }) => {
           <>
             <img src={item?.album.images[0].url} alt={item?.name} />
             <div className="details__song-info">
-              <h4>{item?.name}</h4>
+              <h5>{item?.name}</h5>
               <p>{artistList}</p>
             </div>
           </>
         ) : (
           <div>
-            <h4>No song is playing</h4>
+            <h5>No song is playing</h5>
             <p>...</p>
           </div>
         )}
