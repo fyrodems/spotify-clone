@@ -1,4 +1,5 @@
-import { useContext, useEffect } from "react";
+/* eslint-disable no-unused-expressions */
+import { useContext, useEffect, useState } from "react";
 import { DataLayerContext } from "../utils/DataLayer";
 import "../css/footer.css";
 import { Grid, Slider } from "@material-ui/core";
@@ -14,9 +15,11 @@ import PlaylistPlayIcon from "@material-ui/icons/PlaylistPlay";
 const Footer = ({ spotify }) => {
   const [{ token, item, playing }, dispatch] = useContext(DataLayerContext);
 
+  const [artistList, setArtistList] = useState([]);
+
   useEffect(() => {
     spotify.getMyCurrentPlayingTrack().then((response) => {
-      console.log(response);
+      // console.log(response);
 
       dispatch({
         type: "SET_PLAYING",
@@ -26,10 +29,23 @@ const Footer = ({ spotify }) => {
       dispatch({
         type: "SET_ITEM",
         item: response.item,
+        item_name: response.item.name,
       });
+
+      if (item) {
+        item?.artists.length === 1
+          ? setArtistList(item?.artists[0].name)
+          : // eslint-disable-next-line array-callback-return
+            item?.artists.map((artist) => {
+              // artistList.push(artist.name);
+              // setArtistList([...artistList, artist.name]); //.join(", "));
+              // console.log("artistList ", artistList);
+            });
+      }
     });
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [token]);
+  }, [token, item, playing]);
 
   const handlePlayPause = () => {
     if (playing) {
@@ -83,7 +99,7 @@ const Footer = ({ spotify }) => {
             <img src={item?.album.images[0].url} alt={item?.name} />
             <div className="details__song-info">
               <h4>{item?.name}</h4>
-              <p>{item?.artists.map((artist) => artist.name)}</p>
+              <p>{artistList}</p>
             </div>
           </>
         ) : (
