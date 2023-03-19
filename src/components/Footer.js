@@ -15,17 +15,17 @@ const Footer = ({ spotify }) => {
   const [{ token, item, playing }, dispatch] = useContext(DataLayerContext);
 
   useEffect(() => {
-    spotify.getMyCurrentPlaybackState().then((r) => {
-      console.log(r);
+    spotify.getMyCurrentPlayingTrack().then((response) => {
+      console.log(response);
 
       dispatch({
         type: "SET_PLAYING",
-        playing: r.is_playing,
+        playing: response.is_playing,
       });
 
       dispatch({
         type: "SET_ITEM",
-        item: r.item,
+        item: response.item,
       });
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -49,10 +49,10 @@ const Footer = ({ spotify }) => {
 
   const skipNext = () => {
     spotify.skipToNext();
-    spotify.getMyCurrentPlayingTrack().then((r) => {
+    spotify.getMyCurrentPlayingTrack().then((response) => {
       dispatch({
         type: "SET_ITEM",
-        item: r.item,
+        item: response.item,
       });
       dispatch({
         type: "SET_PLAYING",
@@ -63,10 +63,10 @@ const Footer = ({ spotify }) => {
 
   const skipPrevious = () => {
     spotify.skipToPrevious();
-    spotify.getMyCurrentPlayingTrack().then((r) => {
+    spotify.getMyCurrentPlayingTrack().then((response) => {
       dispatch({
         type: "SET_ITEM",
-        item: r.item,
+        item: response.item,
       });
       dispatch({
         type: "SET_PLAYING",

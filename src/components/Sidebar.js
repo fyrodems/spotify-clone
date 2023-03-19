@@ -25,7 +25,7 @@ const Sidebar = () => {
       <hr />
 
       {playlists?.items?.map((playlist, index) => {
-        console.log(index, playlist);
+        // console.log(index, playlist);
         return <SidebarOption key={playlist.id} title={playlist.name} />;
       })}
     </div>

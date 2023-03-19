@@ -48,12 +48,17 @@
     flex: 0.3;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 } 
 
 .footer__volume div {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.footer__volume div:last-child {
+    max-width: 200px;
 }
 
 .footer__volume .MuiSlider-root {

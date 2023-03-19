@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SearchEngine = ({ spotify }) => {
+const SearchEngine = ({ func, spotify }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
@@ -12,19 +12,20 @@ const SearchEngine = ({ spotify }) => {
     if (e.keyCode !== 13) return;
 
     spotify.searchTracks(searchQuery).then((response) => {
-      console.log(response);
+      //   console.log(response);
       setSearchResults(response);
     });
   };
 
+  func = searchResults;
+
   return (
-    // searchResults;
     <input
       type="text"
       placeholder="Search for something"
       onChange={getUserQuery}
       onKeyUp={handleSearch}
-      searchResults={searchResults}
+      //   searchResults={searchResults}
     />
   );
 };

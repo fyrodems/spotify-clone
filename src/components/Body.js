@@ -17,7 +17,7 @@ const Body = ({ spotify }) => {
         <div className="banner__text">
           <strong>playlista</strong>
           <h2>{discover_weekly?.name}</h2>
-          {console.log(discover_weekly)}
+          {/* {console.log(discover_weekly)} */}
           <p>{discover_weekly?.description}</p>
         </div>
       </div>
